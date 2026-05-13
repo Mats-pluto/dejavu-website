@@ -360,7 +360,7 @@ input, textarea, select {
 }
 
 .hero-ornament.top-left {
-  top: 40px;
+  top: 70px;
   left: 40px;
   border-top: 1px solid var(--gold);
   border-left: 1px solid var(--gold);
