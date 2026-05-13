@@ -1252,6 +1252,12 @@ input, textarea, select {
     display: flex;
   }
 
+  @media (max-height: 730px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
   /* Navigation: Fullscreen-Overlay auf Mobil */
   .main-nav {
     display: none;
