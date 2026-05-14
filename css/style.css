@@ -563,10 +563,110 @@ input, textarea, select {
 
 
 /* =====================
-   10. TEAM
+   10. PREISLISTE
+   ===================== */
+.preise-section {
+  background-color: var(--black);
+}
+
+.preise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.preise-card {
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  background: var(--black-card);
+  padding: 1.8rem 1.5rem;
+  transition: border-color var(--trans), transform var(--trans);
+}
+
+.preise-card:hover {
+  border-color: var(--gold-dark);
+  transform: translateY(-3px);
+}
+
+.preise-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.12);
+}
+
+.preise-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.preise-card-header h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--gold-light);
+  line-height: 1.2;
+}
+
+.preise-sub {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--grey-light);
+  letter-spacing: 0.05em;
+  display: block;
+  margin-top: 0.1rem;
+}
+
+.preise-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.preise-table td {
+  padding: 0.55rem 0;
+  font-size: 0.88rem;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.06);
+  vertical-align: middle;
+}
+
+.preise-table tr:last-child td {
+  border-bottom: none;
+}
+
+.preise-table td:first-child {
+  color: var(--champagne-dim);
+  padding-right: 1rem;
+}
+
+.preise-table td:last-child {
+  text-align: right;
+  color: var(--gold-light);
+  font-weight: 500;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.preise-note {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--grey-light);
+  margin-top: 2.5rem;
+  font-style: italic;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  padding-top: 1.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* =====================
+   11. TEAM
    ===================== */
 .team-section {
-  background-color: var(--black);
+  background-color: var(--black-soft);
 }
 
 .team-grid {
@@ -621,10 +721,10 @@ input, textarea, select {
 
 
 /* =====================
-   11. PRODUKTE
+   12. PRODUKTE
    ===================== */
 .produkte-section {
-  background-color: var(--black-soft);
+  background-color: var(--black);
 }
 
 .products-grid {
@@ -699,10 +799,10 @@ input, textarea, select {
 
 
 /* =====================
-   12. KUNDENSTIMMEN
+   13. KUNDENSTIMMEN
    ===================== */
 .reviews-section {
-  background-color: var(--black);
+  background-color: var(--black-soft);
 }
 
 .reviews-grid {
@@ -764,7 +864,7 @@ input, textarea, select {
 
 
 /* =====================
-   13. TERMIN BUCHEN
+   14. TERMIN BUCHEN
    ===================== */
 .termin-section {
   background: linear-gradient(135deg, var(--black-soft) 0%, var(--black) 100%);
@@ -906,7 +1006,7 @@ input, textarea, select {
 
 
 /* =====================
-   14. KONTAKT & KARTE
+   15. KONTAKT & KARTE
    ===================== */
 .kontakt-section {
   background-color: var(--black-soft);
@@ -964,7 +1064,7 @@ input, textarea, select {
 
 
 /* =====================
-   15. IMAGE PLATZHALTER
+   16. IMAGE PLATZHALTER
    ===================== */
 .img-placeholder {
   background:
@@ -1023,7 +1123,7 @@ input, textarea, select {
 
 
 /* =====================
-   16. FOOTER
+   17. FOOTER
    ===================== */
 .site-footer {
   background-color: #070707;
@@ -1158,7 +1258,7 @@ input, textarea, select {
 
 
 /* =====================
-   17. SCROLL-ANIMATIONEN
+   18. SCROLL-ANIMATIONEN
    ===================== */
 .reveal {
   opacity: 0;
@@ -1180,11 +1280,15 @@ input, textarea, select {
 
 
 /* =====================
-   18. RESPONSIVE – TABLET (max 1024px)
+   19. RESPONSIVE – TABLET (max 1024px)
    ===================== */
 @media (max-width: 1024px) {
 
   .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .preise-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1204,7 +1308,7 @@ input, textarea, select {
 
 
 /* =====================
-   19. RESPONSIVE – MOBIL (max 768px)
+   20. RESPONSIVE – MOBIL (max 768px)
    ===================== */
 @media (max-width: 768px) {
 
@@ -1249,6 +1353,10 @@ input, textarea, select {
   }
 
   .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .preise-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1301,7 +1409,7 @@ input, textarea, select {
 
 
 /* =====================
-   20. RESPONSIVE – KLEINES MOBIL (max 480px)
+   21. RESPONSIVE – KLEINES MOBIL (max 480px)
    ===================== */
 @media (max-width: 480px) {
 
@@ -1316,7 +1424,7 @@ input, textarea, select {
 
 
 /* =====================
-   21. SCROLL-INDIKATOR – kleine Bildschirmhöhe
+   22. SCROLL-INDIKATOR – kleine Bildschirmhöhe
    ===================== */
 @media (max-height: 730px) {
   .scroll-indicator {
