@@ -588,10 +588,10 @@ input, textarea, select {
   transition: border-color var(--trans), transform var(--trans);
 }
 
-.preise-card:hover {
+/* .preise-card:hover {
   border-color: var(--gold-dark);
   transform: translateY(-3px);
-}
+} */
 
 .preise-card-header {
   display: flex;
@@ -827,9 +827,10 @@ input, textarea, select {
   transition: border-color var(--trans);
 }
 
-.review-card:hover {
-  border-color: rgba(201, 168, 76, 0.3);
-}
+/* .review-card:hover {
+  border-color: rgba(201, 168, 76, 0.3); 
+   background: rgba(201, 168, 76, 0.07);
+} */
 
 .review-card::before {
   content: '\201C';
